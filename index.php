@@ -2,7 +2,7 @@
     // Ambil koneksi
     require 'functions.php';
 
-    $mahasiswa = query1("SELECT * FROM mahasiswa");
+    $mahasiswa = query("SELECT * FROM mahasiswa");
 
 ?>
 

@@ -5,7 +5,7 @@
 $conn = mysqli_connect("localhost", "root", "", "phpdasar");
 
     // Membuat function
-function query1($query) {
+function query($query) {
     global $conn;
     $result = mysqli_query($conn, $query);
     $rows = [];
