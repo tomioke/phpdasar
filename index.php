@@ -14,13 +14,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Admin</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
     
     <h1>Daftar Mahasiswa</h1>
 
-    <table border="1" cellpadding="10" cellspacing="0" align="center">
+    <a href="tambah.php" class="btn btn-primary btn"><i class="fas fa-user-plus"></i> Tambah</a>
+
+    <table border="1" cellpadding="10" cellspacing="0">
         <!-- Bagian judul kolom -->
         <tr>
             <th class="text-center">No.</th>   
@@ -39,10 +41,9 @@
         <tr>
             <td><?php echo $a; ?></td>
             <td>
-            <!-- Bagian aksi -->
-                <a href="tambah.php" class="btn btn-primary btn-sm"><i class="fas fa-user-plus"></i> Tambah</a> |
+            <!-- Bagian aksi --> |
                 <a href="" class="btn btn-success btn-sm"><i class="fas fa-edit"></i> Edit</a> |
-                <a href="" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Hapus</a>
+                <a href="hapus.php?id=<?php echo $row["id"]; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin?')"><i class="fas fa-trash-alt"></i> Hapus</a>
             </td>
             <!-- Masukkan kode php untuk membaca isi dari tabel -->
             <td>
@@ -62,4 +63,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="./js/all.js"></script>
+
 </html>
